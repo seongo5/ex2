@@ -1,0 +1,169 @@
+/* ------------------------------------------------- */
+/* visual */
+/* ------------------------------------------------- */
+#visual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#visual .panel {
+  width: 100%;
+  height: 100%;
+}
+#visual .panel li {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  transform: scale(2);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#visual .panel li.on {
+  display: block;
+  transform: scale(1);
+}
+
+#visual .panel li:nth-child(1) {
+  background-image: url(../img/main_visual1.jpg);
+}
+#visual .panel li:nth-child(2) {
+  background-image: url(../img/main_visual2.jpg);
+}
+#visual .panel li:nth-child(3) {
+  background-image: url(../img/main_visual3.jpg);
+}
+
+/* ----------------------------------------------------- */
+/* txt_wrap */
+#visual .txt_wrap {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+#visual .txt_wrap .txt li {
+  display: none;
+}
+#visual .txt_wrap .txt li h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+#visual .txt_wrap .txt li h2 span {
+  color: rgb(94, 225, 255);
+}
+#visual .txt_wrap .txt li p {
+  font-size: 1.2rem;
+}
+
+#visual .txt_wrap .txt li:nth-child(1) {
+  display: block;
+}
+
+/*  */
+#visual .control {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+#visual .control img {
+  cursor: pointer;
+}
+
+#visual .control .progress_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#visual .control .progress_bar li {
+  height: 0.2rem;
+  width: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+
+#visual .control .progress_bar li div {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(94, 225, 255);
+  margin-left: -100%;
+  animation: bar 3s forwards ease-out;
+  display: none;
+}
+@keyframes bar {
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+#visual .control .play_bar .play {
+  display: none;
+}
+
+/* 스크롤 */
+#visual .scroll {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+#visual .scroll .bar {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 1.5rem;
+  width: 0.3rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+#visual .scroll .bar .circle {
+  background-color: #fff;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: circle 3s forwards infinite;
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+    top: 0%;
+  }
+
+  40% {
+    opacity: 1;
+    top: 80%;
+  }
+  60% {
+    opacity: 1;
+    top: 100%;
+  }
+  80% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+/* ------------------------------------------------- */
+/* header */
+/* ------------------------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+/* header logo */
+header h1 .logo {
+  display: none;
+}
+/* header menu */
+header .gnb {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+header .gnb ul {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+header .gnb div a {
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+/* header > hover */
+header:hover {
+  background-color: #fff;
+  color: blue;
+}
+header:hover .logo {
+  display: block;
+}
+header:hover .logo_w {
+  display: none;
+}
+header:hover .gnb div a {
+  border: 1px solid blue;
+}
+header .gnb div a:hover {
+  background-color: blue;
+  color: #fff;
+}
